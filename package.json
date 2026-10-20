@@ -1,0 +1,19 @@
+{
+  "name": "@ciperx/aiax-validate",
+  "version": "1.0.0",
+  "description": "Validate a site's AIAX manifest and its capability sections against the version 0.1 schemas, with a score and one plain message per problem.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {"aiax-validate": "dist/cli.js"},
+  "exports": {".": "./dist/validate.js"},
+  "files": ["dist", "README.md", "fixtures"],
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
